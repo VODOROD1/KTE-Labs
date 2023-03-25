@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ItemClass } from 'src/app/model/itemClass';
 import { StoreService } from 'src/app/services/store-service.service';
 
@@ -7,10 +7,14 @@ import { StoreService } from 'src/app/services/store-service.service';
   templateUrl: './items.component.html',
   styleUrls: ['./items.component.scss'],
 })
-export class ItemsComponent {
+export class ItemsComponent implements OnInit {
   public items: ItemClass[];
 
   constructor(private storeService: StoreService) {}
+
+  ngOnInit() {
+    this.items = this.storeService.getItems();
+  }
 
   public addItemHandler() {
     debugger;

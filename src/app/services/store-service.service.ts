@@ -30,17 +30,29 @@ const initialData: ItemClass[] = [
 
 export class StoreService {
 
-  public state: ItemClass[];
+  public state: {
+    items: ItemClass[]
+  }
 
   constructor() {
-    this.state = initialData
+    this.state = {
+      items: initialData
+    }
+  }
+
+  getItems() {
+    return this.state;
+  }
+
+  getItem(id: number) {
+    return this.state.items.filter(item => item.id === id)
   }
 
   addItem(newItem: ItemClass) {
-    this.state.unshift(newItem)
+    this.state.items.unshift(newItem)
   }
 
   removeItem(id: number) {
-    this.state.
+    // this.state.items
   }
 }
