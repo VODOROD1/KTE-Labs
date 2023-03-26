@@ -1,5 +1,6 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { ItemClass } from 'src/app/model/itemClass';
+import { StoreService } from 'src/app/services/store-service.service';
 
 @Component({
   selector: 'app-item',
@@ -9,4 +10,12 @@ import { ItemClass } from 'src/app/model/itemClass';
 })
 export class ItemComponent {
   @Input() data: ItemClass;
+
+  constructor(private storeService: StoreService) {
+
+  }
+
+  public minusItemHandler(id: number) {
+    this.storeService.removeItem(id)
+  }
 }

@@ -7,9 +7,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 
 export class AddButtonComponent {
-  @Output() onAddItem: EventEmitter<any> = new EventEmitter<any>()
+  @Output() onAddItem: EventEmitter<any> = new EventEmitter()
 
-  public addItemHandler(): void {
-    this.onAddItem.emit()
+  public addItemHandler(event: any): void {
+    debugger;
+    this.onAddItem.emit("ADD_EVENT")
   }
 }

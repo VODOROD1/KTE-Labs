@@ -7,6 +7,7 @@ import { ItemsComponent } from './components/items/items.component';
 import { ItemComponent } from './components/item/item.component';
 import { InitialAppComponent } from './components/initial-app/initial-app.component';
 import { AddButtonComponent } from './components/add-button/add-button.component';
+import { MinusButtonComponent } from './components/minus-button/minus-button.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AddButtonComponent } from './components/add-button/add-button.component
     ItemsComponent,
     ItemComponent,
     InitialAppComponent,
-    AddButtonComponent
+    AddButtonComponent,
+    MinusButtonComponent
   ],
   imports: [
     BrowserModule,
