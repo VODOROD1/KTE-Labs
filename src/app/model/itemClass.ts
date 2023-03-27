@@ -6,9 +6,8 @@ export class ItemClass {
   attributes: string[];
   shortDescription: string;
   price: number;
-  addedToCart: boolean;
   createdAt: Date;
-  images: string[];
+  image: string;
 
   constructor(
     id: number,
@@ -18,9 +17,8 @@ export class ItemClass {
     shortDescription: string,
     attributes: string[],
     price: number,
-    addedToCart: boolean,
     createdAt: Date,
-    images: string[]
+    image: string
     ) {
     this.id = id;
     this.title = title;
@@ -29,8 +27,7 @@ export class ItemClass {
     this.shortDescription = shortDescription;
     this.attributes = attributes;
     this.price = price;
-    this.addedToCart = addedToCart;
     this.createdAt = createdAt;
-    this.images = images;
+    this.image = image;
   }
 }

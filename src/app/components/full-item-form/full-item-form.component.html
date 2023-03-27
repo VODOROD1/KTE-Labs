@@ -4,52 +4,83 @@
       <mat-card-title>Детальная информация</mat-card-title>
     </mat-card-header>
     <mat-card-content>
+      <!--  -->
       <div class="row">
-          <mat-form-field class="full-width">
-            <input
-              formcontrolname="firstName"
-              matInput=""
-              placeholder="First name"
-            />
-          </mat-form-field>
+        <mat-form-field class="full-width">
+          <input
+            formcontrolname="title"
+            matInput=""
+            placeholder="title"
+          />
+        </mat-form-field>
       </div>
       <div class="row">
-          <mat-form-field class="full-width">
-            <input
-              formcontrolname="lastName"
-              matInput=""
-              placeholder="Last name"
-            />
-          </mat-form-field>
+        <mat-form-field class="full-width">
+          <input
+            formcontrolname="amount"
+            matInput=""
+            placeholder="amount"
+          />
+        </mat-form-field>
       </div>
       <div class="row">
-          <mat-form-field class="full-width">
-            <textarea
-              formcontrolname="address"
-              matInput=""
-              placeholder="Address"
-            ></textarea>
-          </mat-form-field>
+        <mat-form-field class="full-width">
+          <textarea
+            formcontrolname="description"
+            matInput=""
+            placeholder="description"
+          ></textarea>
+        </mat-form-field>
       </div>
       <div class="row">
-          <mat-form-field class="full-width" appearance="fill">
-            <mat-label>Select DOB</mat-label>
-            <input formcontrolName="dob" matInput [matDatepicker]="picker" />
-            <mat-datepicker-toggle
-              matSuffix
-              [for]="picker"
-            ></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
+        <mat-form-field class="full-width">
+          <input
+            formcontrolname="shortDescription"
+            matInput=""
+            placeholder="shortDescription"
+          />
+        </mat-form-field>
       </div>
       <div class="row">
+        <mat-form-field class="full-width">
+          <input
+            formcontrolname="price"
+            matInput=""
+            placeholder="price"
+          />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Select date</mat-label>
+          <input formcontrolName="date" matInput [matDatepicker]="datePicker" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="datePicker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #datePicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Select Image</mat-label>
+          <input formcontrolName="image" matInput [matDatepicker]="imagePicker" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="imagePicker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #imagePicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <!--  -->
+      <!-- <div class="row">
         <div class="col-md-12">
           <mat-radio-group formcontrolname="gender" class="margin-left">
             <mat-radio-button value="male"> Male </mat-radio-button>
             <mat-radio-button value="female"> Female </mat-radio-button>
           </mat-radio-group>
         </div>
-      </div>
+      </div> -->
     </mat-card-content>
     <mat-card-actions>
       <button type="submit" mat-raised-button color="primary">Save</button>

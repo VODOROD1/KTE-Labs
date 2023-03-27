@@ -11,11 +11,13 @@ export class FullItemFormComponent implements OnInit {
   
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      firstName: [''],
-      lastName: [''],
-      address: [''],
-      dob: [''],
-      gender: ['']
+      title: [''],
+      amount: [''],
+      description: [''],
+      shortDescription: [''],
+      price: [''],
+      date: [''],
+      image: ['']
     });
   }
 
@@ -24,6 +26,7 @@ export class FullItemFormComponent implements OnInit {
   }
 
   submitHandler() {
-
+    console.log(this.form)
+    debugger
   }
 }
