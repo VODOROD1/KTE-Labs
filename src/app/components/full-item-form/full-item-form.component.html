@@ -8,52 +8,62 @@
       <div class="row">
         <mat-form-field class="full-width">
           <input
-            formcontrolname="title"
+            formControlName="title"
             matInput=""
             placeholder="title"
+            value="фыаыфвпаыфв"
           />
         </mat-form-field>
       </div>
       <div class="row">
         <mat-form-field class="full-width">
           <input
-            formcontrolname="amount"
+            formControlName="amount"
             matInput=""
             placeholder="amount"
+            value="12"
           />
         </mat-form-field>
       </div>
       <div class="row">
         <mat-form-field class="full-width">
           <textarea
-            formcontrolname="description"
+            formControlName="description"
             matInput=""
             placeholder="description"
+            value="афыаыфпаыф"
           ></textarea>
         </mat-form-field>
       </div>
       <div class="row">
         <mat-form-field class="full-width">
           <input
-            formcontrolname="shortDescription"
+            formControlName="shortDescription"
             matInput=""
             placeholder="shortDescription"
+            value="фыпаыфп"
           />
         </mat-form-field>
       </div>
       <div class="row">
         <mat-form-field class="full-width">
           <input
-            formcontrolname="price"
+            formControlName="price"
             matInput=""
             placeholder="price"
+            value="22"
           />
         </mat-form-field>
       </div>
       <div class="row">
         <mat-form-field class="full-width" appearance="fill">
           <mat-label>Select date</mat-label>
-          <input formcontrolName="date" matInput [matDatepicker]="datePicker" />
+          <input
+            formControlName="date"
+            matInput
+            [matDatepicker]="datePicker"
+            value=""
+          />
           <mat-datepicker-toggle
             matSuffix
             [for]="datePicker"
@@ -64,7 +74,12 @@
       <div class="row">
         <mat-form-field class="full-width" appearance="fill">
           <mat-label>Select Image</mat-label>
-          <input formcontrolName="image" matInput [matDatepicker]="imagePicker" />
+          <input
+            formControlName="image"
+            matInput
+            [matDatepicker]="imagePicker"
+            value=""
+            />
           <mat-datepicker-toggle
             matSuffix
             [for]="imagePicker"
@@ -75,7 +90,7 @@
       <!--  -->
       <!-- <div class="row">
         <div class="col-md-12">
-          <mat-radio-group formcontrolname="gender" class="margin-left">
+          <mat-radio-group formControlName="gender" class="margin-left">
             <mat-radio-button value="male"> Male </mat-radio-button>
             <mat-radio-button value="female"> Female </mat-radio-button>
           </mat-radio-group>

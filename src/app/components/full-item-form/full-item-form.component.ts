@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,11 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './full-item-form.component.html',
   styleUrls: ['./full-item-form.component.scss']
 })
+
 export class FullItemFormComponent implements OnInit {
+
+  @Output() formSubmit: EventEmitter<any> = new EventEmitter()
+
   form: FormGroup;
   
   constructor(private formBuilder: FormBuilder) {
@@ -22,11 +26,12 @@ export class FullItemFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.form = new FormGroup({})
+    // this.form = new FormGroup({})
   }
 
   submitHandler() {
     console.log(this.form)
     debugger
+    this.formSubmit.emit(this.form.value)
   }
 }

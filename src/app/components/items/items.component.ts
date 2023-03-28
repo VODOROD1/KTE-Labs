@@ -16,23 +16,23 @@ export class ItemsComponent implements OnInit {
     this.items = this.storeService.getItems();
   }
 
-  public addItemHandler(status: string) {
-    debugger;
-    let newObj: ItemClass = {
-      id: 4,
-      title: 'Гречка',
-      amount: 1,
-      description: 'Этот продукт явяляется гречкой',
-      shortDescription: 'Гречка',
-      attributes: ["attr1", "attr2", "attr3", "attr4", "attr5"],
-      price: 100,
-      createdAt: new Date(),
-      image:
-        "http://archive.brightmedia.ua/userfiles/image/1td/2009_prigotov/pack-prigotov.jpg",
-    };
+  // public addItemHandler(data: any) {
+  //   debugger;
+  //   let newObj: ItemClass = {
+  //     id: 4,
+  //     title: data.title,
+  //     amount: data.amount,
+  //     description: data.description,
+  //     shortDescription: data.shortDescription,
+  //     attributes: [`${data.title}1`, `${data.title}2`, `${data.title}3`, `${data.title}4`, `${data.title}5`],
+  //     price: data.price,
+  //     createdAt: data.date,
+  //     image:
+  //       "http://archive.brightmedia.ua/userfiles/image/1td/2009_prigotov/pack-prigotov.jpg",
+  //   };
 
-    this.storeService.addItem(newObj);
-  }
+  //   this.storeService.addItem(newObj);
+  // }
 
   public removeItemHandler(id: number) {
     this.storeService.removeItem(id);

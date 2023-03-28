@@ -8,6 +8,7 @@ import { StoreService } from 'src/app/services/store-service.service';
   styleUrls: ['./item.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
+
 export class ItemComponent {
   @Input() data: ItemClass;
 
