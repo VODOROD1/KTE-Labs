@@ -1,6 +1,6 @@
 <div class="content">
     <h2 class="headline">Items</h2>
-    <app-add-button (onAddItem)="addItemHandler($event)"></app-add-button>
+    <app-add-button [routerLink]="['/creat-item']"></app-add-button>
   <div class="card-container">
     <div *ngFor="let item of items">
       <app-item [data]="item"/>

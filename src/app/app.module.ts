@@ -9,7 +9,7 @@ import { AddButtonComponent } from './components/add-button/add-button.component
 import { MinusButtonComponent } from './components/minus-button/minus-button.component';
 import { FullItemComponent } from './components/full-item/full-item.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FullItemFormComponent } from './components/full-item-form/full-item-form.component';
+import { ItemFormComponent } from './components/item-form/item-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
@@ -19,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { CreateItemComponent } from './components/create-item/create-item.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MatButtonModule } from '@angular/material/button';
     AddButtonComponent,
     MinusButtonComponent,
     FullItemComponent,
-    FullItemFormComponent
+    ItemFormComponent,
+    CreateItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,9 +47,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatInputModule
+    MatInputModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
