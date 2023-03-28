@@ -7,7 +7,7 @@ import { StoreService } from 'src/app/services/store-service.service';
   templateUrl: './create-item.component.html',
   styleUrls: ['./create-item.component.scss']
 })
-export class CreateItemComponent {
+export class CreateItemComponent implements OnInit {
   constructor(private storeService: StoreService) {}
 
   ngOnInit() {}
