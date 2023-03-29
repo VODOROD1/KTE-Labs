@@ -16,24 +16,23 @@ export class CreateItemComponent implements OnInit {
     console.log(data);
     debugger;
 
-    let newObj: ItemClass = {
-      id: 4,
-      title: data.title,
-      amount: data.amount,
-      description: data.description,
-      shortDescription: data.shortDescription,
-      attributes: [
+    let newObj: ItemClass = new ItemClass(
+      4,
+      data.title,
+      data.amount,
+      data.description,
+      data.shortDescription,
+      [
         `${data.title}1`,
         `${data.title}2`,
         `${data.title}3`,
         `${data.title}4`,
         `${data.title}5`,
       ],
-      price: data.price,
-      createdAt: data.date,
-      image:
-        'http://archive.brightmedia.ua/userfiles/image/1td/2009_prigotov/pack-prigotov.jpg',
-    };
+      data.price,
+      data.date,
+      'http://archive.brightmedia.ua/userfiles/image/1td/2009_prigotov/pack-prigotov.jpg',
+    );
 
     this.storeService.addItem(newObj);
     debugger;

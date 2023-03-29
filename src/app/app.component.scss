@@ -33,9 +33,10 @@ p {
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
+  background-color: rgba(255, 255, 255, 0.93);
   color: white;
   font-weight: 600;
+  border-bottom: 1px solid silver;
 }
 
 .toolbar img {
@@ -64,6 +65,7 @@ p {
   max-width: 960px;
   flex-direction: column;
   align-items: center;
+  background: "https://ktelabs.ru/img/photography.png"
 }
 
 svg.material-icons {
