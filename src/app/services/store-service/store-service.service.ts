@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ItemClass } from '../model/itemClass';
+import { ItemClass } from '../../model/itemClass';
 
 interface IState {
   items: ItemClass[]

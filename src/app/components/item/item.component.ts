@@ -1,6 +1,6 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { ItemClass } from 'src/app/model/itemClass';
-import { StoreService } from 'src/app/services/store-service.service';
+import { StoreService } from 'src/app/services/store-service/store-service.service';
 
 @Component({
   selector: 'app-item',

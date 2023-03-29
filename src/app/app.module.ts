@@ -20,6 +20,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { CreateItemComponent } from './components/create-item/create-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import { CreateItemComponent } from './components/create-item/create-item.compon
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
-    
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
