@@ -14,10 +14,9 @@ export class CreateItemComponent implements OnInit {
 
   formSubmitHandler(data: any) {
     console.log(data);
-    debugger;
 
     let newObj: ItemClass = new ItemClass(
-      4,
+      "1",
       data.title,
       data.amount,
       data.description,
@@ -35,6 +34,5 @@ export class CreateItemComponent implements OnInit {
     );
 
     this.storeService.addItem(newObj);
-    debugger;
   }
 }

@@ -10,31 +10,29 @@ import { StoreService } from 'src/app/services/store-service/store-service.servi
 export class ItemsComponent implements OnInit {
   public items: ItemClass[];
 
-  constructor(private storeService: StoreService) {}
-
-  ngOnInit() {
+  constructor(private storeService: StoreService) {
     this.items = this.storeService.getItems();
   }
 
-  // public addItemHandler(data: any) {
-  //   debugger;
-  //   let newObj: ItemClass = {
-  //     id: 4,
-  //     title: data.title,
-  //     amount: data.amount,
-  //     description: data.description,
-  //     shortDescription: data.shortDescription,
-  //     attributes: [`${data.title}1`, `${data.title}2`, `${data.title}3`, `${data.title}4`, `${data.title}5`],
-  //     price: data.price,
-  //     createdAt: data.date,
-  //     image:
-  //       "http://archive.brightmedia.ua/userfiles/image/1td/2009_prigotov/pack-prigotov.jpg",
-  //   };
+  ngOnInit() {
+    
+  }
 
-  //   this.storeService.addItem(newObj);
-  // }
+  public addItemHandler() {
+    let newObj: ItemClass = {
+      id: "1",
+      title: "Новый продукт1",
+      amount: 3,
+      description: "Данный продукт является в количестве трех штук",
+      attributes: ["attr1", "attr2", "attr3", "attr4", "attr5"],
+      shortDescription: "Новый продукт1",
+      price: 50,
+      createdAt: new Date(),
+      image:
+        "https://kalach-na-donu.diamondelectric.ru/images/3332/3331263/moloko_prostokvashino_yltrapasterizovannoe_32_950_ml_1.jpg",
+      }
 
-  public removeItemHandler(id: number) {
-    this.storeService.removeItem(id);
+    debugger;
+    this.storeService.addItem(newObj);
   }
 }

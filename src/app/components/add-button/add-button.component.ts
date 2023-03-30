@@ -10,7 +10,6 @@ export class AddButtonComponent {
   @Output() onAddItem: EventEmitter<any> = new EventEmitter()
 
   public addItemHandler(event: any): void {
-    debugger;
     this.onAddItem.emit("ADD_EVENT")
   }
 }

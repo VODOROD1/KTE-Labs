@@ -1,5 +1,5 @@
 export class ItemClass {
-  id: number;
+  id: string;
   title: string;
   amount: number;
   description: string;
@@ -10,7 +10,7 @@ export class ItemClass {
   image: string;
 
   constructor(
-    id: number,
+    id: string,
     title: string,
     amount: number,
     description: string,

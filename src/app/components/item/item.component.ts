@@ -16,7 +16,8 @@ export class ItemComponent {
 
   }
 
-  public minusItemHandler(id: number) {
+  public minusItemHandler(id: any) {
+    debugger;
     this.storeService.removeItem(id)
   }
 }

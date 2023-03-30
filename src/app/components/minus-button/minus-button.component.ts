@@ -10,7 +10,6 @@ export class MinusButtonComponent {
   @Output() onMinusItem: EventEmitter<any> = new EventEmitter()
 
   public minusItemHandler(event: any): void {
-    debugger;
     this.onMinusItem.emit("MINUS_EVENT")
   }
 }

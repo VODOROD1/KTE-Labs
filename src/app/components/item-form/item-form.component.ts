@@ -31,7 +31,6 @@ export class ItemFormComponent implements OnInit {
 
   submitHandler() {
     console.log(this.form)
-    debugger
     this.formSubmit.emit(this.form.value)
   }
 }
