@@ -4,6 +4,7 @@
 
   <div *ngIf="itemEntries.length === 0; else content">
     Content is loading...
+    ITEM ID - {{item.id}}
   </div>
 
   <ng-template #content>
